@@ -9,14 +9,21 @@ import java.util.Scanner;
 
 public class TestConnection {
 
+	/**
+	 * Konstruktor mit uebergebenem SQL-Statement
+	 * @param request
+	 */
 	public TestConnection(String request)
 	{
-		doTestRequest(request);
+		doTestRequest(request);	// Abfrage mit eingegebenem Statement durchfuehren
 	}
 	
+	/**
+	 * Konstruktor ohne uebergebenem SQL-Statement
+	 */
 	public TestConnection()
 	{
-		doTestRequest("SELECT * FROM adressen");
+		doTestRequest("SELECT * FROM adressen");	// Abfrage mit vorgegebenem Statement durchfuehren
 	}
 
 	private void doTestRequest(String request)
