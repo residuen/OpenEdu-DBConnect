@@ -1,5 +1,5 @@
 /*
-TestConnection: Testklasse fuer DBConnection.
+TestConnectionGui: Testklasse fuer DBConnection.
 
 Copyright (C) 2011 Karsten Blauel
 
