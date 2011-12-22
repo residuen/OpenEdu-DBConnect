@@ -37,18 +37,17 @@ public class TestConnection {
 				
 		dbConnection.setDriver("com.mysql.jdbc.Driver");	// Datenbank-Treiber
 		dbConnection.setDbTyp("jdbc:mysql");	// DB-COnnection-Prefix
-		dbConnection.setDbPath("localhost");	// Adresse der Datenbank
+		dbConnection.setDbIpAdress("localhost");	// Adresse der Datenbank
 		dbConnection.setDbPort("3306");			// Port der Datenbank
 		dbConnection.setDbName("wvs-java-db");	// Datenbankname
 		dbConnection.setDbUser("user");			// Benutzername
 		dbConnection.setDbUserPasswd("wvs");	// Kennwort des Benutzers
-		dbConnection.setSqlStatement("SELECT * FROM adressen");	// SQL-Statement
 		
 //		System.out.println("Geben Sie einen SQL-Abfragebefehl ein:");	// Aufforderung zur Eingabe
-//		
 //		request = input.nextLine();		 // Folgendes Beispiel eingeben: SELECT * FROM adressen WHERE anrede='Herr'
-//
-//		dbConnection.setSqlStatement("SELECT * FROM adressen");	// SQL-Statement
+//		dbConnection.setSqlStatement(request);
+		
+		dbConnection.setSqlStatement("SELECT * FROM adressen");	// SQL-Statement
 		
 		rSet = dbConnection.doRequest();
 		

@@ -26,12 +26,12 @@ import java.util.Scanner;
 public class DBConnection {
 	
 	private String driver = "com.mysql.jdbc.Driver";	// Datenbank-Treiber
-	private String dbTyp = "jdbc:mysql";	// DB-COnnection-Prefix
-	private String dbPath = "localhost";	// Adresse der Datenbank
-	private String dbPort = "3306";			// Port der Datenbank
-	private String dbName = "wvs-java-db";	// Datenbankname
-	private String dbUser = "user";			// Benutzername
-	private String dbUserPasswd = "wvs";	// Kennwort des Benutzers
+	private String dbTyp = "jdbc:mysql";		// DB-COnnection-Prefix
+	private String dbIpAdress = "localhost";	// Adresse der Datenbank
+	private String dbPort = "3306";				// Port der Datenbank
+	private String dbName = "wvs-java-db";		// Datenbankname
+	private String dbUser = "user";				// Benutzername
+	private String dbUserPasswd = "wvs";		// Kennwort des Benutzers
 	
 	private String sqlStatement = "SELECT * FROM adressen";	// SQL-Statement
 
@@ -65,7 +65,7 @@ public class DBConnection {
 		try {
 			// Stelle Verbindung mit MySQL-Datenbank wvs-java-db her.
 			// Benutzername=user, Kennwort=wvs
-			con = DriverManager.getConnection(dbTyp+"://"+dbPath+":"+dbPort+"/"+dbName, dbUser, dbUserPasswd);
+			con = DriverManager.getConnection(dbTyp+"://"+dbIpAdress+":"+dbPort+"/"+dbName, dbUser, dbUserPasswd);
 		}
 		catch (SQLException e1) { e1.printStackTrace(); }	// Fehlerbehandlung
 		
@@ -91,8 +91,8 @@ public class DBConnection {
 		this.dbTyp = dbTyp;
 	}
 
-	public void setDbPath(String dbPath) {
-		this.dbPath = dbPath;
+	public void setDbIpAdress(String dbIpAdress) {
+		this.dbIpAdress = dbIpAdress;
 	}
 
 	public void setDbPort(String dbPort) {
@@ -114,5 +114,4 @@ public class DBConnection {
 	public void setSqlStatement(String sqlStatement) {
 		this.sqlStatement = sqlStatement;
 	}
-
 }

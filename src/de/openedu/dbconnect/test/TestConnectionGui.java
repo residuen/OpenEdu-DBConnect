@@ -15,13 +15,7 @@ Falls nicht, siehe <http://www.gnu.org/licenses/>.
 
 package de.openedu.dbconnect.test;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Scanner;
-
 import javax.swing.JFrame;
-
-import de.openedu.dbconnect.connection.DBConnection;
 
 public class TestConnectionGui extends JFrame {
 
